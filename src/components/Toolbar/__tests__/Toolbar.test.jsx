@@ -14,10 +14,11 @@ describe("Hamburger Toolbar Component Tests", function() {
         const { queryAllByRole, queryByText } = renderWithRouter(<UserProvider><Toolbar /></UserProvider>);
 
         // 5 links (home, about us, posts, partners, sign up)
-        expect(queryAllByRole("link").length).toBe(5);
+        expect(queryAllByRole("link").length).toBe(6);
         expect(queryByText("About Us")).toBeInTheDocument();
         expect(queryByText("Posts")).toBeInTheDocument();
         expect(queryByText("Partners")).toBeInTheDocument();
+        expect(queryByText("Meet the Team")).toBeInTheDocument();
         expect(queryByText("Sign Up")).toBeInTheDocument();
     });
 
@@ -26,10 +27,11 @@ describe("Hamburger Toolbar Component Tests", function() {
         const { queryAllByRole, queryByText } = renderWithRouter(<UserProvider><Toolbar /></UserProvider>);
 
         // 5 links (home, about us, posts, partners, profile)
-        expect(queryAllByRole("link").length).toBe(5);
+        expect(queryAllByRole("link").length).toBe(6);
         expect(queryByText("About Us")).toBeInTheDocument();
         expect(queryByText("Posts")).toBeInTheDocument();
         expect(queryByText("Partners")).toBeInTheDocument();
+        expect(queryByText("Meet the Team")).toBeInTheDocument();
         expect(queryByText("Sign Up")).not.toBeInTheDocument();
     });
 

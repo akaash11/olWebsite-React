@@ -42,6 +42,11 @@ function Toolbar() {
               Partners
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/meet-the-team" activeClassName="active-link">
+              Meet the Team
+            </NavLink>
+          </li>
         </ul>
       </nav>
       <ul className="icon-module">
